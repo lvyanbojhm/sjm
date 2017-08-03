@@ -9,7 +9,8 @@ class ToDoController extends BaseController{
     public function index()
     {
         $todos = ToDo::all();
-        return $this->render('todo/index', ['todos' => $todos]);
+        
+return $this->render('todo/index', ['todos' => $todos]);
     }
 
     public function migrate(){
