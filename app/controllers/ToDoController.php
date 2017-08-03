@@ -15,7 +15,8 @@ return $this->render('todo/index', ['todos' => $todos]);
 
     public function migrate(){
 
-        Pheasant::setup('mysql://root:root@localhost:3306/test');
+ 
+       Pheasant::setup('mysql://root:root@localhost:3306/test');
         $migrator = new \Pheasant\Migrate\Migrator();
 
         $migrator->initialize(ToDo::schema(), 'todo');
